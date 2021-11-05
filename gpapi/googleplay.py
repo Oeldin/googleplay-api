@@ -634,13 +634,13 @@ class GooglePlayAPI(object):
         log_request.timestamp = timestamp
 
         string_request = log_request.SerializeToString()
-        response = requests.post(LOG_URL,
-                                 data=string_request,
-                                 headers=self.getHeaders(),
-                                 verify=ssl_verify,
-                                 timeout=60,
-                                 proxies=self.proxies_config)
-        print(response.content)
+        #response = requests.post(LOG_URL,
+        #                         data=string_request,
+        #                         headers=self.getHeaders(),
+        #                         verify=ssl_verify,
+        #                         timeout=60,
+        #                         proxies=self.proxies_config)
+
         #response = googleplay_pb2.ResponseWrapper.FromString(response.content)
         #if response.commands.displayErrorMessage != "":
         #    raise RequestError(response.commands.displayErrorMessage)
