@@ -640,9 +640,10 @@ class GooglePlayAPI(object):
                                  verify=ssl_verify,
                                  timeout=60,
                                  proxies=self.proxies_config)
-        response = googleplay_pb2.ResponseWrapper.FromString(response.content)
-        if response.commands.displayErrorMessage != "":
-            raise RequestError(response.commands.displayErrorMessage)
+        print(response.content)
+        #response = googleplay_pb2.ResponseWrapper.FromString(response.content)
+        #if response.commands.displayErrorMessage != "":
+        #    raise RequestError(response.commands.displayErrorMessage)
 
     def toc(self):
         response = requests.get(TOC_URL,
